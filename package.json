@@ -1,0 +1,15 @@
+{
+    "name": "shox",
+    "description": "shox, yet another pub/sub service",
+    "version": "0.1.0",
+    "homepage": "https://github.com/virushuo/Shox",
+    "dependencies" : {
+    "mysql"   :  "*",
+    "MD5"   :  "*",
+    "m6"   :  "git://github.com/virushuo/M6.git",
+    "mongodb"   :  "*" ,
+    "socket.io"   :  "*",
+    "socket.io-client"   :  "*"
+  }
+}
+

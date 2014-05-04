@@ -1,0 +1,16 @@
+var config = {}
+config.extension=["basic"];
+config.storage={};
+config.storage.name="mongo";
+config.storage.env={};
+config.storage.env.Host="127.0.0.1";
+config.storage.env.Port=27017;
+config.storage.env.DBNAME="shox";
+config.storage.env.User="";
+config.storage.env.Password="";
+
+config.regport=4010;
+config.messageport=4011;
+config.loglevel=1;
+
+module.exports = config;
