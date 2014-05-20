@@ -1,7 +1,7 @@
-Shox: Yet another pub/sub lightwight messaging service
+Shox: Yet another lightwight pub/sub messaging service
 ======================================================
 
-Shox is a flexible extensible pub/sub messageing service that can be defined subscription logic by extension.
+Shox is a flexible extensible pub/sub messageing service that can be defined subscription logic by extensions.
 
 Configuration
 -------------
