@@ -77,6 +77,12 @@ function v1_unreg(req, res) {
           res.end(JSON.stringify(api_output));
 
         }); 
+      }else{
+        meta.code=500;
+        meta.err="bad request params.";
+        api_output["meta"]=meta;
+        api_output["response"]=responseobj;
+        res.end(JSON.stringify(api_output));
       }
 
     }catch(err){
@@ -116,6 +122,12 @@ function v1_reg(req, res) {
           res.end(JSON.stringify(api_output));
 
         }); 
+      }else{
+        meta.code=500;
+        meta.err="bad request params.";
+        api_output["meta"]=meta;
+        api_output["response"]=responseobj;
+        res.end(JSON.stringify(api_output));
       }
 
     }catch(err){
