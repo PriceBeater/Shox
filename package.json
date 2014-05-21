@@ -8,8 +8,8 @@
     "MD5"   :  "*",
     "m6"   :  "git://github.com/virushuo/M6.git",
     "mongodb"   :  "*" ,
-    "socket.io"   :  "*",
-    "socket.io-client"   :  "*"
+    "socket.io"   :  "0.9.16",
+    "socket.io-client"   :  "0.9.16"
   }
 }
 
