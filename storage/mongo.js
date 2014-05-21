@@ -72,8 +72,6 @@ var storage= function() {
       else{
         var collection = db.collection('pubsub');
         collection.remove({hashkey:key,subscriber_id:subscriber_id},function(err, docs) {
-          console.log(err);
-          console.log(docs);
           callback(err,docs);
         });
       }
@@ -81,8 +79,6 @@ var storage= function() {
   }
 
   var _find=function(key,obj,callback){
-    console.log(key);
-    console.log(obj);
     _connect(function(err,db){ 
       if(err){
         callback(err,[]);
