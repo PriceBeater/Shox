@@ -34,8 +34,13 @@ function v1_publish(data) {
         if(data.key && data.param){
           serverlib.Publish(data.key,{param:data.param},function(publish_list){
             if(messageStream){
-              if(publish_list.length>0)
-                messageStream.emit("MESSAGE",publish_list);
+              if(publish_list.length>0){
+                var object={};
+                if(data.object)
+                  object=data.object;
+
+                messageStream.emit("MESSAGE",{object:object, message:publish_list});
+              }
             }
             //send to socket
           });
