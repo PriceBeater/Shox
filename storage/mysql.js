@@ -7,14 +7,14 @@ var storage= function() {
   var _connect=function(callback) {
     if (dbconnect === undefined) {
       dbconnect = _mysql.createConnection({
-            host: HOST,
-            port: PORT,
-            user: MYSQL_USER,
-            password: MYSQL_PASS,
+            host: config.storage.env.Host,
+            port: config.storage.env.Port,
+            user: config.storage.env.User,
+            password: config.storage.env.Password,
       });
       
       dbconnect.connect();
-      dbconnect.query('use ' + DATABASE);
+      dbconnect.query('use ' + config.storage.env.DBNAME);
 
       callback(null,dbconnect);
     } else {
