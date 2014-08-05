@@ -38,7 +38,6 @@ function v1_publish(data) {
                 var object={};
                 if(data.object)
                   object=data.object;
-
                 messageStream.emit("MESSAGE",{object:object, message:publish_list});
               }
             }
@@ -154,7 +153,6 @@ var messageStream= io.of('/v1/message').on('connection', function (socket){
 var pubsubStream= io.of('/v1/publish').on('connection', function (socket){
   console.log("clienht connect");
     socket.on('DATA',function(message){
-      console.log(message);
       v1_publish(message);
     });
 

@@ -1,5 +1,4 @@
 var config= require('../config');
-//var MongoClient = require('mongodb').MongoClient;
 var _mysql = require('mysql');
 var dbconnect;
 
@@ -32,7 +31,7 @@ var storage= function() {
       }
       else{
         var select_sql = "select * from "+config.storage.env.TABLENAME+" where urlhash='"+key+"'";
-        mysql.query(select_sql, function(err,results,fields){ 
+        dbconnect.query(select_sql, function(err,results,fields){ 
           var docs=[];
           for(var i in results){
             var r=results[i];
