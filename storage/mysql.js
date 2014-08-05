@@ -31,7 +31,7 @@ var storage= function() {
         callback(err,[]);
       }
       else{
-        var select_sql = "select * from favorites where urlhash='"+key+"'";
+        var select_sql = "select * from "+config.storage.env.TABLENAME+" where urlhash='"+key+"'";
         mysql.query(select_sql, function(err,results,fields){ 
           var docs=[];
           for(var i in results){
